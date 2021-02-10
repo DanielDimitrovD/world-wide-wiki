@@ -107,8 +107,8 @@ main {
     flex-direction: column-reverse;
 }
 
-.country-info,
-.country-more-info {
+#country-info,
+#country-more-info {
     display: flex;
     flex-flow: column;
 }
@@ -117,12 +117,12 @@ main {
     padding-bottom: 10px;
 }
 
-.country-container {
+#country-container {
     display: flex;
     flex-direction: row;
 }
 
-.country-more-info {
+#country-more-info {
     margin-left: 50px;
 }
 
@@ -161,15 +161,15 @@ main {
         margin: 0;
     }
 
-    .country-container {
+    #country-container {
         flex-direction: column;
     }
 
-    .country-info {
+    #country-info {
         margin-bottom: 1em;
     }
 
-    .country-more-info {
+    #country-more-info {
         margin: 0;
     }
 
