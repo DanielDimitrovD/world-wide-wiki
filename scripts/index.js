@@ -17,7 +17,7 @@ function validateUserInput() {
         return;
     }
 
-    window.open("./filter.html");
+    window.open("./html/filter.html");
     window.close();
 }
 
