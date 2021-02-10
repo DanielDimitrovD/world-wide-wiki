@@ -4,8 +4,8 @@ document.getElementById("login-button").addEventListener("click", validateUserIn
 document.getElementById("register-button").addEventListener("click", validateUserInput);
 
 function validateUserInput() {
-    const email = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
 
     if (!validateEmail(email)) {
         alert("Please enter a valid email address.")
@@ -17,7 +17,7 @@ function validateUserInput() {
         return;
     }
 
-    window.open("./html/filter.html");
+    window.open("./filter.html");
     window.close();
 }
 
