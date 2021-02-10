@@ -230,6 +230,7 @@ function generateBorderCountriesNode(countryObject) {
 
 function clearCountryHMTL() {
     document.getElementById("country-name").innerHTML = "";
-    document.getElementById("country-borders").innerHTML = "";
-    document.getElementById("country-info").innerHTML = "";
+    document.getElementById("country-info").innerText = "";
+    document.getElementById("country-borders").innerText = "";
+    
 }
