@@ -15,7 +15,7 @@ function callbackGenerateCountryHTML() {
 }
 
 document.getElementById("back-button").addEventListener("click", () => {
-    window.open("../index.html");
+    window.open("./filter.html");
     window.close();
 });
 
@@ -235,5 +235,4 @@ function clearCountryHMTL() {
     document.getElementById("country-name").innerHTML = "";
     document.getElementById("country-borders").innerHTML = "";
     document.getElementById("country-info").innerHTML = "";
-    document.getEleemntById("country-flag").innerHTML = "";
 }
