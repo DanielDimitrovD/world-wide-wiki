@@ -321,7 +321,7 @@ function generateMainPageCountriesHMLT(countriesArray, countriesCount) {
 }
 
 function renderCountryNode(countryObject) {
-    let divContainer = document.createElement("div");
+    let divContainer = document.createElement("section");
     divContainer.className = "country-container";
     divContainer.id = countryObject.name;
 
