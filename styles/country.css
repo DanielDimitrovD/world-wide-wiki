@@ -122,6 +122,10 @@ main {
     flex-direction: row;
 }
 
+#country-container-wrapper {
+    display:flex;
+}
+
 #country-more-info {
     margin-left: 50px;
 }
@@ -148,6 +152,11 @@ main {
 }
 
 @media only screen and (max-width: 1000px) {
+    
+    #country-container-wrapper {
+        flex-direction: column;
+    }
+    
     #country-flag {
         width: 90%;
         height: auto;
