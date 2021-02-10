@@ -8,12 +8,14 @@ function validateUserInput() {
     const password = document.getElementById("password").value.trim();
 
     if (!validateEmail(email)) {
-        alert("Please enter a valid email address.")
+        alert("Please enter a valid email address.");
         return;
     }
 
     if (!validatePassword(password)) {
-        alert("Password not valid. Must contain only aplhabet characters and numbers and be atleast 9 symbols long.")
+        alert(
+            "Password not valid. Must contain only aplhabet characters and numbers and be atleast 9 symbols long."
+        );
         return;
     }
 

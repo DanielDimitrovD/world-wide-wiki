@@ -2,20 +2,18 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
- }
- 
- body {
+}
+
+body {
     margin: 0px;
     min-height: 100%;
     width: 100%;
     background-color: #f5f5f0;
- }
- 
+}
 
 main {
     padding-left: 5%;
     padding-right: 5%;
-    /* background-color: white; */
     height: 100%;
     background-color: #f5f5f0;
 }
@@ -37,8 +35,7 @@ main {
     padding-right: 5%;
 }
 
-
-#dark-mode-wrapper{
+#dark-mode-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +45,6 @@ main {
     width: 1.5em;
 }
 
-
 #dark-mode-button {
     background: url(../img/moon.png) center no-repeat;
     background-size: 20px;
@@ -57,6 +53,7 @@ main {
     height: 20px;
     border: none;
     margin: 1em;
+    cursor: pointer;
 }
 
 #dark-mode-button:focus {
@@ -78,6 +75,7 @@ main {
     background-size: 50px;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #back-button:focus {
@@ -109,7 +107,8 @@ main {
     flex-direction: column-reverse;
 }
 
-.country-info, .country-more-info {
+.country-info,
+.country-more-info {
     display: flex;
     flex-flow: column;
 }
@@ -139,6 +138,7 @@ main {
     background-color: white;
     border: 1px solid rgb(243, 243, 243);
     width: 40px;
+    cursor: pointer;
 }
 
 #country-borders {
@@ -148,7 +148,6 @@ main {
 }
 
 @media only screen and (max-width: 1000px) {
-
     #country-flag {
         width: 90%;
         height: auto;
@@ -171,7 +170,7 @@ main {
     }
 
     .country-more-info {
-       margin: 0;
+        margin: 0;
     }
 
     #country-borders {
@@ -182,5 +181,4 @@ main {
     #borders {
         padding: 0;
     }
-    
 }

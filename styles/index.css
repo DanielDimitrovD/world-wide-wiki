@@ -3,12 +3,12 @@
     font-weight: 100;
 }
 
-html, body {
+html,
+body {
     font-size: 16px;
     margin: 0;
     height: 100%;
-    background-image: linear-gradient(-100deg, #A2F2F1 0%, #B19AFE 100%);
-    /* background-color: #f5f5f0; */
+    background-image: linear-gradient(-100deg, #a2f2f1 0%, #b19afe 100%);
 }
 
 #navbar {
@@ -20,7 +20,7 @@ html, body {
 
 ::-webkit-input-placeholder {
     text-align: center;
- }
+}
 
 #article {
     display: flex;
@@ -32,7 +32,7 @@ html, body {
 
 #input-form input:focus {
     outline: none;
-    border-bottom: 1px solid rgb(0 , 24, 214);
+    border-bottom: 1px solid rgb(0, 24, 214);
 }
 
 #button-container {
@@ -42,7 +42,7 @@ html, body {
 
 #button-container button {
     max-width: 10rem;
-} 
+}
 
 #button-wrapper {
     display: flex;
@@ -146,7 +146,6 @@ html, body {
 #register-button:focus {
     outline: none;
 }
-
 
 #external-login-icons-ul {
     display: flex;

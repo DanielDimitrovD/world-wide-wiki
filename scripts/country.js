@@ -8,7 +8,6 @@ window.onload = () => {
 
 function callbackGenerateCountryHTML() {
     if (this.readyState == 4 && this.status == 200) {
-        console.log("render country" + this.responseText);
         let countryObj = JSON.parse(this.responseText);
         generateCountryHTML({ ...countryObj[0] });
     }
@@ -94,8 +93,6 @@ function renderCountry(restService, callback) {
 }
 
 function generateCountryHTML(country) {
-    console.log(country);
-
     let newCountryNode = renderCountryNode(country);
 
     document.getElementById("country-info").appendChild(newCountryNode);
@@ -116,7 +113,7 @@ function renderCountryNode(countryObject) {
         let spanElement = document.createElement("span");
         spanElement.className = "first-word";
         spanElement.innerHTML = "Border Countries:";
-        
+
         document.getElementById("country-borders").appendChild(spanElement);
     }
 
@@ -205,7 +202,7 @@ function generateBorderCountriesNode(countryObject) {
 
         borderNode.addEventListener("click", () => {
             clearCountryHMTL();
-    
+
             let restServiceCountryByCode = `https://restcountries.eu/rest/v2/alpha/${b}`;
 
             let xhttp = new XMLHttpRequest();
