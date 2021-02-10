@@ -205,8 +205,7 @@ function generateBorderCountriesNode(countryObject) {
 
         borderNode.addEventListener("click", () => {
             clearCountryHMTL();
-            console.log(b);
-
+    
             let restServiceCountryByCode = `https://restcountries.eu/rest/v2/alpha/${b}`;
 
             let xhttp = new XMLHttpRequest();
@@ -236,4 +235,5 @@ function clearCountryHMTL() {
     document.getElementById("country-name").innerHTML = "";
     document.getElementById("country-borders").innerHTML = "";
     document.getElementById("country-info").innerHTML = "";
+    document.getEleemntById("country-flag").innerHTML = "";
 }
