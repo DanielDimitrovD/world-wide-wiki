@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/filter.css">
+    <script src="../scripts/filter.js" defer></script>
+
+    <title>World Wide Wiki</title>
+</head>
+
+<body>
+
+    <header id = "header">
+
+        <nav id="navbar">
+            <h1>World Wide Wiki</h1>
+
+            <div id="dark-mode-wrapper">
+                 <button id="dark-mode-button"> </button>
+                <span>Dark Mode</span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main  id="main">
+
+        <div id="filter-wrapper">
+
+            <div id="filter-search">
+                <button id="search-button"></button>
+                <input type="text" placeholder="Choose search option..." id="search-country-field">
+            </div>
+
+            <select name="filter-category" id="filter-category">
+                <option value="default" selected disabled hidden>Search option</option>
+                <option value="full-name">Country full name</option>
+                <option value="country-code">Country code</option>
+                <option value="currency-code">Currency code</option>
+                <option value="language-code">Language code</option>
+                <option value="capital-city">Capital city</option>
+                <option value="calling-code">Calling code</option>
+            </select>
+
+        </div>
+
+        <article id="article">
+        </article>
+
+    </main>
+
+</body>
+
+</html>
