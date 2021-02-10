@@ -4,9 +4,7 @@ window.onload = () => {
     renderMainPage();
 };
 
-
 document.getElementById("filter-category").addEventListener("change", () => {
-
     const filterOption = document.getElementById("filter-category").value;
 
     document.getElementById("search-country-field").placeholder = `Search by ${filterOption}`;
@@ -75,8 +73,6 @@ document.getElementById("search-button").addEventListener("click", () => {
             break;
         }
     }
-
-
 });
 
 function sendRequest(restService, callback) {
@@ -87,7 +83,6 @@ function sendRequest(restService, callback) {
 }
 
 function renderCountryByFullName(countryFullName) {
-
     if (countryFullName) {
         const restService = `https://restcountries.eu/rest/v2/name/${countryFullName}?fullText=true?fields=name;capital;flag;population;region`;
 
@@ -135,7 +130,7 @@ function callbackRenderSearchResults() {
         document.getElementById("article").innerHTML = "";
 
         let object = JSON.parse(this.responseText);
-        
+
         generateMainPageCountriesHMLT(object, object.length);
 
         return true;
@@ -177,16 +172,14 @@ function validateCountryCallingCode(countryCallingCode) {
     return new String(countryCallingCode).match(countryCallingCodeRegex) != null ? true : false;
 }
 
-
 function validateCountry(countryName) {
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
-        
         if (this.readyState == 4 && this.status != 200) {
             alert("Invalid country name! Please try again.");
         }
-        
+
         if (this.readyState == 4 && this.status == 200) {
             window.open("../html/country.html", countryName);
             window.close();
@@ -199,7 +192,6 @@ function validateCountry(countryName) {
     xhttp.send();
 }
 
-
 document.getElementById("dark-mode-button").addEventListener("click", () => {
     let navbarColor = document.getElementById("navbar").style.backgroundColor;
 
@@ -209,7 +201,6 @@ document.getElementById("dark-mode-button").addEventListener("click", () => {
         setLightMode();
     }
 });
-
 
 function setDarkMode() {
     let navbar = document.getElementById("navbar");
@@ -225,21 +216,20 @@ function setDarkMode() {
     let darkButton = document.getElementById("dark-mode-button");
     darkButton.style.backgroundColor = "white";
 
-
-   let countries = document.getElementsByClassName("country-container");
-   Array.from(countries).forEach(c => {
-       c.style.backgroundColor = "rgb(43, 55, 67)";
-       c.style.color = "white";     
+    let countries = document.getElementsByClassName("country-container");
+    Array.from(countries).forEach((c) => {
+        c.style.backgroundColor = "rgb(43, 55, 67)";
+        c.style.color = "white";
     });
 
     let spanText = document.getElementsByClassName("first-word");
-    Array.from(spanText).forEach(c => {
-        c.style.color = "white";     
-     });
+    Array.from(spanText).forEach((c) => {
+        c.style.color = "white";
+    });
 
-     let filterCategory = document.getElementById("filter-category");
-     filterCategory.style.backgroundColor = "rgb(43, 55, 67)";
-     filterCategory.style.color = "white";
+    let filterCategory = document.getElementById("filter-category");
+    filterCategory.style.backgroundColor = "rgb(43, 55, 67)";
+    filterCategory.style.color = "white";
 }
 
 function setLightMode() {
@@ -254,27 +244,25 @@ function setLightMode() {
     let body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = "#f5f5f0";
 
-
     let darkButton = document.getElementById("dark-mode-button");
     darkButton.style.backgroundColor = "white";
 
     let countries = document.getElementsByClassName("country-container");
 
-    Array.from(countries).forEach(c => {
+    Array.from(countries).forEach((c) => {
         c.style.backgroundColor = "white";
-        c.style.color = "black";     
-     });
- 
-     let spanText = document.getElementsByClassName("first-word");
-     Array.from(spanText).forEach(c => {
-         c.style.color = "black";     
-      });
- 
-      let filterCategory = document.getElementById("filter-category");
-      filterCategory.style.backgroundColor = "white";
-      filterCategory.style.color = "black";
-}
+        c.style.color = "black";
+    });
 
+    let spanText = document.getElementsByClassName("first-word");
+    Array.from(spanText).forEach((c) => {
+        c.style.color = "black";
+    });
+
+    let filterCategory = document.getElementById("filter-category");
+    filterCategory.style.backgroundColor = "white";
+    filterCategory.style.color = "black";
+}
 
 function renderMainPage() {
     let xhttp = new XMLHttpRequest();
@@ -287,7 +275,8 @@ function renderMainPage() {
         }
     };
 
-    const restService = "https://restcountries.eu/rest/v2/region/europe?fields=name;capital;flag;population;region";
+    const restService =
+        "https://restcountries.eu/rest/v2/region/europe?fields=name;capital;flag;population;region";
 
     xhttp.open("GET", restService, true);
     xhttp.send();
@@ -322,14 +311,13 @@ function generateCountriesHTML(countriesArray, index) {
 }
 
 function generateMainPageCountriesHMLT(countriesArray, countriesCount) {
-
     if (Array.isArray(countriesArray)) {
         for (let i = 0; i < countriesCount; i++) {
             generateCountriesHTML(countriesArray, i);
         }
     } else {
-            generateCountryHTML(countriesArray);
-    }    
+        generateCountryHTML(countriesArray);
+    }
 }
 
 function renderCountryNode(countryObject) {
@@ -358,7 +346,7 @@ function renderCountryNode(countryObject) {
     countryNameNode.innerHTML = countryObject.name;
 
     let countryInfoNode = generateCountryInfoNode(countryObject);
-    
+
     countryFlagWrapperDiv.appendChild(countryFlagNode);
 
     divContainer.appendChild(countryFlagWrapperDiv);
@@ -374,7 +362,6 @@ function generateCountryInfoNode(countryObject) {
 
     let color = document.getElementById("navbar").style.color;
 
-
     let countryPopulationNode = document.createElement("span");
     countryPopulationNode.innerHTML = `<strong>Population</strong>: ${new Intl.NumberFormat().format(
         countryObject.population
@@ -382,12 +369,10 @@ function generateCountryInfoNode(countryObject) {
     countryPopulationNode.className = "first-word";
     countryPopulationNode.style.color = color;
 
-
     let countryRegionNode = document.createElement("span");
     countryRegionNode.innerHTML = `<strong>Region</strong>: ${countryObject.region}`;
     countryRegionNode.className = "first-word";
     countryRegionNode.style.color = color;
-
 
     let countryCapitalNode = document.createElement("span");
     countryCapitalNode.innerHTML = `<strong>Capital</strong>: ${countryObject.capital}`;

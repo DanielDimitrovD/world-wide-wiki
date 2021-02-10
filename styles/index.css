@@ -11,13 +11,6 @@ body {
     background-image: linear-gradient(-100deg, #a2f2f1 0%, #b19afe 100%);
 }
 
-#navbar {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid grey;
-}
-
 ::-webkit-input-placeholder {
     text-align: center;
 }
