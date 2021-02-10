@@ -38,6 +38,10 @@ function isDarkMode() {
 }
 
 function setDarkMode() {
+
+    let modeSpan = document.getElementById("mode");
+    modeSpan.innerText = "Light mode";
+
     let navbar = document.getElementById("navbar");
     navbar.style.backgroundColor = "rgb(43, 55, 67)";
     navbar.style.color = "rgb(249, 255, 255)";
@@ -61,6 +65,10 @@ function setDarkMode() {
 }
 
 function setLightMode() {
+
+    let modeSpan = document.getElementById("mode");
+    modeSpan.innerText = "Dark mode";
+
     let navbar = document.getElementById("navbar");
     navbar.style.backgroundColor = "white";
     navbar.style.color = "black";
