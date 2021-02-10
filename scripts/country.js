@@ -100,7 +100,7 @@ function generateCountryHTML(country) {
 
 function renderCountryNode(countryObject) {
     let divContainer = document.createElement("div");
-    divContainer.className = "country-container";
+    divContainer.id = "country-container-wrapper";
 
     let countryInfoNode = generateCountryInfoNode(countryObject);
     let countryMoreInfoNode = generateCountryMoreInfoNode(countryObject);
@@ -124,7 +124,7 @@ function renderCountryNode(countryObject) {
 
 function generateCountryMoreInfoNode(countryObject) {
     let countryMoreInfoNode = document.createElement("div");
-    countryMoreInfoNode.className = "country-more-info";
+    countryMoreInfoNode.id = "country-more-info";
 
     let countryTopLevelDomainNode = document.createElement("span");
     countryTopLevelDomainNode.innerHTML = `<strong>Top Level Domain</strong>: ${countryObject.topLevelDomain}`;
@@ -152,7 +152,7 @@ function generateCountryInfoNode(countryObject) {
     document.getElementById("country-flag").src = countryObject.flag;
 
     let countryInfoNode = document.createElement("div");
-    countryInfoNode.className = "country-info";
+    countryInfoNode.id = "country-info";
 
     let countryNativeNameNode = document.createElement("span");
     countryNativeNameNode.innerHTML = `<strong>Native Name</strong>: ${countryObject.nativeName}`;
