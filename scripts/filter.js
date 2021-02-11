@@ -136,7 +136,7 @@ function callbackRenderSearchResults() {
         return true;
     }
 
-    if (this.readyState == 4 && this.status !== 404) {
+    if (this.readyState == 4 && this.status !== 200) {
         alert("Not valid input!");
         return false;
     }
